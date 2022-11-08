@@ -7,9 +7,8 @@
  const cors = require('cors');
  const sequelize = require('./DBConnection')
 
-const QuizzRoutes = require('./src/routes/QuizzRoutes');
-const QuestionRoutes = require('./src/routes/QuestionRoutes');
-const AnswerRoutes = require('./src/routes/AnswerRoutes');
+
+const PictureRoutes = require('./src/routes/PictureRoutes');
  /**
   * Configurer l'app
   */
@@ -17,9 +16,7 @@ const AnswerRoutes = require('./src/routes/AnswerRoutes');
  app.use(cors());
  app.use(bp.json());
  
-app.use('/quizz', QuizzRoutes);
-app.use('/question', QuestionRoutes);
-app.use('/answer', AnswerRoutes);
+app.use('/picture', PictureRoutes);
 
  
  app.get("/", (req, res) =>{
